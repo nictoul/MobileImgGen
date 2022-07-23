@@ -8,6 +8,7 @@
 
     <ItemGroup>
       <PackageReference Include="Mono.Options" Version="6.12.0.148" />
+      <PackageReference Include="Ninject" Version="3.3.6" />
     </ItemGroup>
 
 </Project>

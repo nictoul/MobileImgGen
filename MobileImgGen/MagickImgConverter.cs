@@ -5,15 +5,22 @@ using System.Linq;
 
 namespace MobileImgGen
 {
-    public class MagickImgConverter
+    public interface IImgConverter
     {
-        private readonly Config _config;
+        void ProcessConversions();
+        void SetConfig(Config config);
+    }
+    
+    
+    public class MagickImgConverter: IImgConverter
+    {
+        private Config _config;
         private readonly Dictionary<string, decimal> _imageSize;
 
 
-        public MagickImgConverter(Config config)
+        public MagickImgConverter()
         {
-            _config = config;
+            
             _imageSize = new Dictionary<string, decimal>()
             {
                 {"LDPI", 0.75m},
@@ -41,6 +48,11 @@ namespace MobileImgGen
             }
            
             ProcessCommand(commands);
+        }
+
+        public void SetConfig(Config config)
+        {
+            _config = config;
         }
 
         private void ProcessCommand(List<string> commands)
