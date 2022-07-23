@@ -47,6 +47,9 @@ namespace MobileImgGen
                 Exit();
                 return;
             }
+            
+            _imgConverter.SetConfig(_config);
+            _imgConverter.ProcessConversions();
         }
         
         private void PrintHelp()

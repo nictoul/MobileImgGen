@@ -15,9 +15,8 @@ namespace MobileImgGen
             var consoleExecuter = Resolver.Kernel.Get<IConsoleExecuter>();
             consoleExecuter.Execute(configParser.Config);
             
-            var magickImgConverter = Resolver.Kernel.Get<IImgConverter>();
-            magickImgConverter.SetConfig(configParser.Config);
-            magickImgConverter.ProcessConversions();
         }
     }
 }
+
+//-s 3.0 -i "C:\temp\MobileImgGen\icon.png"

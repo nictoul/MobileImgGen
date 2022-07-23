@@ -39,7 +39,7 @@ namespace MobileImgGen
                     arg => _outputPath = arg },
                 { "i|inputFile=",  "Input image file to convert", 
                     arg => _inputFile = arg },
-                { "h|help=",  "Show this message and exit", 
+                { "h|help",  "Show this message and exit", 
                     arg => _showHelp = arg != null },
             };
         }
