@@ -42,11 +42,12 @@ namespace MobileImgGen
                     continue;
                 }
                 var percentage = GetConversionPercentage(_config.OriginalImageSize, imgSize.Value);
+                //TODO: create Preview folder if not exist
                 var outputFile = _config.PreviewPath + "\\" + GetInputFileName() + imgSize.Key + "." + GetInputFileExtension();
                 var magickCommand = $"magick {_config.InputFile} -resize {percentage}% {outputFile}";
                 commands.Add(magickCommand);
             }
-           
+           //TODO copy images in the output folder as android project are organised (in subfolder LDPI, MDPI ...)
             ProcessCommand(commands);
         }
 
