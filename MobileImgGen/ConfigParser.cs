@@ -17,7 +17,7 @@ namespace MobileImgGen
         private decimal _originalImageSize = 0;
         private string _outputPath = @"C:\temp\MobileImgGenOutput";
         private string _previewPath = @"C:\temp\MobileImgGen";
-        private string _inputFile = null;
+        private string _inputFile;
 
 
         private OptionSet Options;
@@ -25,6 +25,9 @@ namespace MobileImgGen
         public ConfigParser()
         {
             Options = new OptionSet () {
+                "Usage: MobileImgGen -s1.5 -i \"C:\\temp\\icon.png",
+                "Take an image and create all android image size",
+                "Options:",
                 { "s|size=", "Original image size (ex: 1.5) \n"
                              + "\tLDPI:\t 36x36\t 0.75\n"
                              + "\tMDPI:\t 48x48\t 1.0\n"
@@ -55,13 +58,11 @@ namespace MobileImgGen
                 Options.WriteOptionDescriptions(helpMessage);
                 
                 Config = new Config(_originalImageSize, _outputPath, _previewPath, _inputFile, extra,helpMessage.ToString(), _showHelp);
-                Console.WriteLine(Config);
             }
             catch (OptionException e) {
                 Console.WriteLine (e.Message);
                 Console.WriteLine ("Try `MobileImgConverter --help' for more information.");
             }
-            Console.WriteLine("bye World!");
         }
         
         

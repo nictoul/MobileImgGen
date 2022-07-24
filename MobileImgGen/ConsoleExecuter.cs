@@ -47,14 +47,14 @@ namespace MobileImgGen
                 Exit();
                 return;
             }
-            
+
+            Console.WriteLine(_config);
             _imgConverter.SetConfig(_config);
             _imgConverter.ProcessConversions();
         }
         
         private void PrintHelp()
         {
-            Console.WriteLine ("Options:");
             Console.WriteLine(_config.HelpMessage);
         }
 
@@ -68,7 +68,7 @@ namespace MobileImgGen
 
         private void Exit()
         {
-            Console.WriteLine("Exit!");
+            Console.WriteLine(" MobileImgGen Exit!");
         }
     }
 }
