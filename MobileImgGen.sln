@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileImgGen", "MobileImgGen\MobileImgGen.csproj", "{1ED6EE09-5D56-4F9A-A232-61E62FE571A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileImgGen.Tests", "MobileImgGen.Tests\MobileImgGen.Tests.csproj", "{BAA4A120-DF42-4103-B89F-8D799A82581A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{1ED6EE09-5D56-4F9A-A232-61E62FE571A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1ED6EE09-5D56-4F9A-A232-61E62FE571A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1ED6EE09-5D56-4F9A-A232-61E62FE571A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAA4A120-DF42-4103-B89F-8D799A82581A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAA4A120-DF42-4103-B89F-8D799A82581A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAA4A120-DF42-4103-B89F-8D799A82581A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAA4A120-DF42-4103-B89F-8D799A82581A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
